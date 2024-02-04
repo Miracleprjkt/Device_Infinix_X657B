@@ -16,6 +16,8 @@
 
 DEVICE_PATH := device/infinix/X657B
 
+ALLOW_MISSING_DEPENDENCIES=true
+
 # Architecture
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv8-a

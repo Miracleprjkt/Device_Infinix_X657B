@@ -15,7 +15,7 @@
 #
 
 # Inherit from hot10 device makefile
-$(call inherit-product, device/infinix/hot10/device.mk)
+$(call inherit-product, device/infinix/X657B/device.mk)
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -26,11 +26,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
 USE_PIXEL_CHARGING := true
 
-# Gapps
-USE_GAPPS := true
-TARGET_GAPPS_ARCH := arm64
-IS_PHONE := true
-
 #
 # All components inherited here go to system_ext image
 #
@@ -38,16 +33,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_system_ext.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := hot10
-PRODUCT_NAME := nad_hot10
+PRODUCT_DEVICE := X657B
+PRODUCT_NAME := nad_X657B
 PRODUCT_BRAND := Infinix
-PRODUCT_MODEL := Infinix Hot 10
+PRODUCT_MODEL := Infinix SMART 5
 PRODUCT_MANUFACTURER := Infinix
 
 PRODUCT_GMS_CLIENTID_BASE := android-infinix
 TARGET_VENDOR := infinix
-TARGET_VENDOR_PRODUCT_NAME := hot10
-PRODUCT_BUILD_PROP_OVERRIDES += PRIVATE_BUILD_DESC="sys_tssi_64_infinix-user 10 QP1A.190711.020 50086 release-keys"
+TARGET_VENDOR_PRODUCT_NAME := X657B
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="sys_tssi_32_ago_infinix_q_ota-user 11 RP1A.200720.011 164722 release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := Infinix/TSSI/FULL-64:10/QP1A.190711.020/201109V254:user/release-keys
+BUILD_FINGERPRINT := Infinix/X657B-OP-S2/Infinix-X657B:11/RP1A.200720.011/221121V777:user/release-keys

@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-   $(LOCAL_DIR)/nad_hot10.mk
+   $(LOCAL_DIR)/nad_X657B.mk
 
 COMMON_LUNCH_CHOICES := \
-    nad_hot10-user \
-    nad_hot10-userdebug \
-    nad_hot10-eng
+    nad_X657B-user \
+    nad_X657B-userdebug \
+    nad_X657B-eng

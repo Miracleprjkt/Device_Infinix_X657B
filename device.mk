@@ -23,7 +23,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/infinix/hot10/hot10-vendor.mk)
+$(call inherit-product, vendor/infinix/X657B/X657B-vendor.mk)
 
 # IMS
 $(call inherit-product, vendor/mediatek/ims/mtk-ims.mk)
@@ -64,12 +64,12 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.mt6768.rc \
-    fstab.mt6768
+    init.mt6761.rc \
+    fstab.mt6761
 
 # Fstab
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/rootdir/etc/fstab.mt6768:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6768
+    $(DEVICE_PATH)/rootdir/etc/fstab.mt6761:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6761
 
 # Keylayout
 PRODUCT_COPY_FILES += \
@@ -91,7 +91,7 @@ PRODUCT_PACKAGES += \
     
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.hot10
+    android.hardware.light@2.0-service.X657B
 
 # NFC stack (AOSP)
 PRODUCT_PACKAGES += \
